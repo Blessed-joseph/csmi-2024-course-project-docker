@@ -1,0 +1,6 @@
+= Course Project Docker Example 
+2024
+
+== Introduction
+
+This is a simple example of a course project that uses Docker to run the application. The application is a simple web server that returns a greeting message.
