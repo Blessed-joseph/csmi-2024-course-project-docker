@@ -15,11 +15,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag csmi:py3
+      run: docker build . --file Dockerfile --tag csmi:py
     - name: Push the Docker image
       run: |
         echo ${{ secrets.DOCKER_PASSWORD }} | docker login ghcr.io -u ${{ github.repository_owner }}  --password-stdin
-        docker tag csmi:py3 ghcr.io/${{ github.repository_owner }}/csmi:py3
-        docker push ghcr.io/${{ github.repository_owner }}/csmi:py3
+        docker tag csmi:py3 ghcr.io/${{ github.repository_owner }}/csmi:py
+        docker push ghcr.io/${{ github.repository_owner }}/csmi:py
  
 
